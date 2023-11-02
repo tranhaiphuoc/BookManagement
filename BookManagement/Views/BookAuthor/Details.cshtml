@@ -1,0 +1,25 @@
+﻿@model BookManagement.ViewModel.BookAuthorViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Book's Author</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AuthorName)
+        </dd>
+    </dl>
+    <hr />
+</div>
+<div>
+    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.BookAuthorId">Edit</a> |
+    <a class="btn btn-primary" asp-action="Index" asp-route-bookId="@ViewBag?.BookId">Back to List</a>
+</div>
